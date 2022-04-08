@@ -193,7 +193,7 @@ h6 {
 }
 
 body {
-  font-family: "", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #000;
   font-weight: 400;
 }
@@ -272,12 +272,6 @@ header._fix-header {
 /*===========================================*/
 
 /*===========================================*/
-
-.page {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-}
 
 /*===========================================*/
 

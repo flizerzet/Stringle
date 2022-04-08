@@ -13,13 +13,17 @@
 //---ПЕРЕМЕННЫЕ---===============================
 
 //---Шрифт по умолчанию
-$fontFamily: "";
+$fontFamily: "Poppins";
 $fontWeight: 400;
 $fontSize: rem(16);
 //---Цвет текста по умолчанию
 $mainColor: #000;
 
 //---Основные цвета
+
+$accentRed: #FF808B;
+$accentBlue: #5E81F4;
+$accentPurple: #4D4CAC;
 
 //---РАЗМЕРЫ---===============================
 // Минимальная ширина страницы
@@ -80,10 +84,6 @@ body {
 @import "components/header";
 
 /*===========================================*/
-
-.page {
-	flex: 1 1 auto;
-}
 
 @import "components/home";
 
