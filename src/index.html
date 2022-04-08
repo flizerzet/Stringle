@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	@@include('_head.html', {
+	title: 'Главная',
+	description: 'Описание',
+	url: '',
+	image: ''
+	})
+</head>
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html', {})
+		<main class="page">
+			<div class="quantity" data-quantity>
+				<div class="quantity__button quantity__button_minus">-</div>
+				<div class="quantity__input"><input autocomplete="off" type="text" disabled value="1"></div>
+				<div class="quantity__button quantity__button_plus">+</div>
+			</div>
+		</main>
+		@@include('_footer.html', {})
+	</div>
+</body>
+
+</html>
