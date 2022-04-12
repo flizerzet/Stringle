@@ -91,22 +91,18 @@ import * as modules from './components/modules.js'
 /*===========================================*/
 //---Select
 
-// new modules.Select('._select', {
-// 	placeholder: "Dropown",
-//	selected: 1,
-// 	data: [
-// 		{id: '1', value: "Item"},
-// 		{id: '2', value: "Item"},
-// 		{id: '3', value: "Item"},
-// 		{id: '4', value: "Item"},
-// 		{id: '5', value: "Item"},
-// 		{id: '6', value: "Item"},
-
-// 	],
-// 	onSelect(item) {
-// 		console.log('Selected item: ', item);
-// 	}
-// })
+new modules.Select('._select', {
+	placeholder: "Last Week",
+	selectedID: 1,
+	data: [
+		{id: '1', value: "Last Week"},
+		{id: '2', value: "Last Month"},
+		{id: '3', value: "Last Day"},
+	],
+	onSelect(item) {
+		console.log('Selected item: ', item);
+	}
+})
 
 // window.s = select;
 

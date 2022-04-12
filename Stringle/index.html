@@ -40,8 +40,219 @@
 	<div class="wrapper">
 		<main class="page">
 			<aside class="main-menu">
-				<a href="" class="main-menu__logo"><img src="img/logo.svg" alt="" /></a>
+				<a href="" class="main-menu__logo">
+					<img src="img/logo.svg" alt="" />
+					<span>Stringle</span>
+				</a>
+				<div class="main-menu__menu">
+					<nav class="main-menu__body">
+						<ul class="main-menu__list">
+							<li class="main-menu__item"><a class="main-menu__link _icon-house" href="#">Dashboard</a></li>
+							<li class="main-menu__item"><a class="main-menu__link _icon-folder" href="#">Classes</a></li>
+							<li class="main-menu__item"><a class="main-menu__link _icon-book" href="#">Resources</a></li>
+							<li class="main-menu__item"><a class="main-menu__link _icon-calendar" href="#">Learning Plan</a></li>
+							<li class="main-menu__item" data-notification="4"><a class="main-menu__link _icon-chat" href="#">Chat</a></li>
+							<li class="main-menu__item"><a class="main-menu__link _icon-settings" href="#">Settings</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="main-menu__upgrade upgrade-main-menu">
+					<div class="upgrade-main-menu__img"><img src="img/upgrade.png" alt=""></div>
+					<div class="upgrade-main-menu__text">Upgrade to <span>PRO</span> for more resources</div>
+					<button class="upgrade-main-menu__btn">Upgrade</button>
+				</div>
 			</aside>
+			<div class="main">
+				<header class="header">
+					<div class="search-header__input">
+						<input type="text" placeholder="Search...">
+					</div>
+					<div class="header__date"></div>
+					<div class="header__search search-header">
+						<div class="search-header__btn__wrapper">
+							<div class="search-header__btn">
+								<span class="circle"></span>
+								<span class="line"></span>
+							</div>
+						</div>
+					</div>
+				</header>
+				<div class="hello">
+					<h1 class="hello__title">Welcome back Anna!</h1>
+					<div class="hello__text">You've learned 80% of your goal this week! Keep it up and improve your results!</div>
+					<div class="hello__img"><img src="img/header-img.png" alt=""></div>
+				</div>
+				<div class="main__body">
+					<div class="main__block block-main">
+						<div class="block-main__header">
+							<div class="block-main__title">
+								Latest results
+							</div>
+							<a href="" class="block-main__link _icon-arrow">More</a>
+						</div>
+						<div class="block-main__result result">
+							<div class="result__item">
+								<div class="result__title">Unit 5 - <span>Technology</span></div>
+								<div class="result__progress">
+									<progress value="0.25"></progress>
+									<span class="result__progress_value"></span>
+								</div>
+							</div>
+							<div class="result__item">
+								<div class="result__title">Unit 12 - <span>Ecology</span></div>
+								<div class="result__progress">
+									<progress value="0.44"></progress>
+									<span class="result__progress_value"></span>
+								</div>
+							</div>
+							<div class="result__item">
+								<div class="result__title">Unit 9 - <span>Real estate</span></div>
+								<div class="result__progress">
+									<progress value="0.4"></progress>
+									<span class="result__progress_value"></span>
+								</div>
+							</div>
+							<div class="result__item">
+								<div class="result__title">Unit 8 - <span>Education</span></div>
+								<div class="result__progress">
+									<progress value="0.15"></progress>
+									<span class="result__progress_value"></span>
+								</div>
+							</div>
+							<div class="result__item">
+								<div class="result__title">Unit 16 - <span>Job market</span></div>
+								<div class="result__progress">
+									<progress value="0.75"></progress>
+									<span class="result__progress_value"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="main__block block-main main-spended">
+						<div class="block-main__header">
+							<div class="block-main__title">
+								Last week
+							</div>
+							<div class="block-main__link _select"></div>
+						</div>
+						<div class="block-main__spended spended">
+							<div class="spended__table table-spended">
+								<div class="table-spended__item">
+									<div class="table-spended__title">Mon</div>
+									<div class="table-spended__progress">
+										<div style="height: 100%;" class="progress-writing"></div>
+										<div style="height: 75%;" class="progress-grammar"></div>
+										<div style="height: 40%;" class="progress-vocabulary"></div>
+										<div style="height: 30%;" class="progress-listening"></div>
+									</div>
+								</div>
+								<div class="table-spended__item">
+									<div class="table-spended__title">Tue</div>
+									<div class="table-spended__progress">
+										<div style="height: 100%;" class="progress-listening"></div>
+										<div style="height: 75%;" class="progress-grammar"></div>
+										<div style="height: 45%;" class="progress-writing"></div>
+										<div style="height: 4%;" class="progress-vocabulary"></div>
+									</div>
+								</div>
+								<div class="table-spended__item">
+									<div class="table-spended__title">Wed</div>
+									<div class="table-spended__progress">
+										<div style="height: 100%;" class="progress-grammar"></div>
+										<div style="height: 66%;" class="progress-vocabulary"></div>
+										<div style="height: 33%;" class="progress-writing"></div>
+										<div style="height: 15%;" class="progress-listening"></div>
+									</div>
+								</div>
+								<div class="table-spended__item">
+									<div class="table-spended__title">Thu</div>
+									<div class="table-spended__progress">
+										<div style="height: 100%;" class="progress-listening"></div>
+										<div style="height: 75%;" class="progress-grammar"></div>
+										<div style="height: 50%;" class="progress-writing"></div>
+										<div style="height: 40%;" class="progress-vocabulary"></div>
+									</div>
+								</div>
+								<div class="table-spended__item">
+									<div class="table-spended__title">Fri</div>
+									<div class="table-spended__progress">
+										<div style="height: 100%;" class="progress-listening"></div>
+										<div style="height: 75%;" class="progress-grammar"></div>
+										<div style="height: 40%;" class="progress-vocabulary"></div>
+										<div style="height: 10%;" class="progress-writing"></div>
+									</div>
+								</div>
+								<div class="table-spended__item">
+									<div class="table-spended__title">Sat</div>
+									<div class="table-spended__progress">
+										<div style="height: 100%;" class="progress-grammar"></div>
+										<div style="height: 50%;" class="progress-writing"></div>
+										<div style="height: 30%;" class="progress-vocabulary"></div>
+										<div style="height: 20%;" class="progress-listening"></div>
+									</div>
+								</div>
+								<div class="table-spended__item">
+									<div class="table-spended__title">Sun</div>
+									<div class="table-spended__progress">
+										<div style="height: 100%;" class="progress-grammar"></div>
+										<div style="height: 60%;" class="progress-listening"></div>
+										<div style="height: 30%;" class="progress-vocabulary"></div>
+										<div style="height: 10%;" class="progress-writing"></div>
+									</div>
+								</div>
+							</div>
+							<div class="spended__legend legend-spended">
+								<div class="legend-spended__item">
+									<div class="legend-spended__marker legend-spended__marker_vocabulary"></div>
+									<div class="legend-spended__title">Vocabulary</div>
+								</div>
+								<div class="legend-spended__item">
+									<div class="legend-spended__marker legend-spended__marker_grammar"></div>
+									<div class="legend-spended__title">Grammar</div>
+								</div>
+								<div class="legend-spended__item">
+									<div class="legend-spended__marker legend-spended__marker_listening"></div>
+									<div class="legend-spended__title">Listening</div>
+								</div>
+								<div class="legend-spended__item">
+									<div class="legend-spended__marker legend-spended__marker_writing"></div>
+									<div class="legend-spended__title">Writing</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<footer class="footer">
+					<div class="footer__header">
+						<div class="footer__title">Your courses</div>
+						<a href="" class="block-main__link _icon-arrow">More</a>
+					</div>
+					<div class="footer__cards">
+						<div class="footer__card card-footer card-footer_purple">
+							<div class="card-footer__level">B2</div>
+							<div class="card-footer__info">
+								<div class="card-footer__subtitle">Business English</div>
+								<a href="" class="block-main__link _icon-arrow card-footer__title">Grammar</a>
+							</div>
+						</div>
+						<div class="footer__card card-footer card-footer_lightpurple">
+							<div class="card-footer__level">B2</div>
+							<div class="card-footer__info">
+								<div class="card-footer__subtitle">Common English</div>
+								<a href="" class="block-main__link _icon-arrow card-footer__title">Phrasal Verbs</a>
+							</div>
+						</div>
+						<div class="footer__card card-footer card-footer_red">
+							<div class="card-footer__level">C1</div>
+							<div class="card-footer__info">
+								<div class="card-footer__subtitle">Business Spanish</div>
+								<a href="" class="block-main__link _icon-arrow card-footer__title">Vocabulary</a>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+			<div class="user-menu"></div>
 		</main>
 	</div>
 </body>

@@ -17,13 +17,15 @@ $fontFamily: "Poppins";
 $fontWeight: 400;
 $fontSize: rem(16);
 //---Цвет текста по умолчанию
-$mainColor: #000;
+$mainColor: #111026;
 
 //---Основные цвета
 
 $accentRed: #FF808B;
 $accentBlue: #5E81F4;
 $accentPurple: #4D4CAC;
+
+$textColor: #A2A2C2;
 
 //---РАЗМЕРЫ---===============================
 // Минимальная ширина страницы
@@ -45,6 +47,7 @@ body {
 	font-family: $fontFamily, sans-serif;
 	color: $mainColor;
 	font-weight: $fontWeight;
+	background-color: rgb(245,245,251);
 	// Блокировка скролла
 	&._locked {
 		overflow: hidden;
@@ -84,6 +87,10 @@ body {
 @import "components/header";
 
 /*===========================================*/
+
+.page {
+	display: flex;
+}
 
 @import "components/home";
 

@@ -1,7 +1,7 @@
 // Стили для иконочного шрифта
 
 %ic {
-	font-family: 'icons';
+	font-family: "icons";
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
@@ -13,7 +13,7 @@
 }
 
 [class*="_icon-"] {
-	&:before{
+	&:before {
 		@extend %ic;
 		display: block;
 	}
@@ -21,41 +21,40 @@
 
 ._icon-arrow:before {
 	content: "\e900";
-  }
-  ._icon-book:before {
+}
+._icon-book:before {
 	content: "\e901";
-  }
-  ._icon-calendar:before {
+}
+._icon-calendar:before {
 	content: "\e902";
-  }
-  ._icon-chat:before {
+}
+._icon-chat:before {
 	content: "\e903";
-  }
-  ._icon-dropdown-arrow:before {
+}
+._icon-dropdown-arrow:before {
 	content: "\e904";
-  }
-  ._icon-exit:before {
+}
+._icon-exit:before {
 	content: "\e905";
-  }
-  ._icon-folder:before {
+}
+._icon-folder:before {
 	content: "\e906";
-  }
-  ._icon-house:before {
+}
+._icon-house:before {
 	content: "\e907";
-  }
-  ._icon-mail:before {
+}
+._icon-mail:before {
 	content: "\e908";
-  }
-  ._icon-reminder:before {
+}
+._icon-reminder:before {
 	content: "\e909";
-  }
-  ._icon-search:before {
+}
+._icon-search:before {
 	content: "\e90a";
-  }
-  ._icon-settings:before {
+}
+._icon-settings:before {
 	content: "\e90b";
-  }
-  ._icon-warning:before {
+}
+._icon-warning:before {
 	content: "\e90c";
-  }
-  
+}

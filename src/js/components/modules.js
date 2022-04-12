@@ -633,13 +633,13 @@ export function showMore() {
 }
 
 //---Select
-const getTemplate = (data = [], placeholder, selectedId) => {
-	let text = placeholder ?? 'Placeholder по умолчанию';
+const getTemplate = (data = [], placeholder, selectedID) => {
+	let text = placeholder ?? "Placeholder по умолчанию";
 
 	const htmlItems = data.map(item => {
-		let cls = ''
-		if (item.id === selectedId) {
-			text = item.value
+		let cls = '';
+		if (item.id === selectedID) {
+			text = item.value;
 			cls = '_selected'
 		}
 		return `
@@ -648,17 +648,17 @@ const getTemplate = (data = [], placeholder, selectedId) => {
 	})
 
 	return `
-		<div class="select__body">
-			<div class="select__input" data-type="input">
-				<span data-type="value">${text}</span>
-				<div class="select__icon _icon-chevron-bottom"></div>
-			</div>
-			<div class="select__dropdown">
-				<ul class="select__list">
-					${htmlItems.join('')}
-				</ul>
-			</div>
-		</div>
+<div class="select__body">
+	<div class="select__input" data-type="input">
+		<span data-type="value">${text}</span>
+		<div class="select__icon _icon-dropdown-arrow"></div>
+	</div>
+	<div class="select__dropdown">
+		<ul class="select__list">
+			${htmlItems.join('')}
+		</ul>
+	</div>
+</div>
 	`
 }
 
@@ -666,10 +666,12 @@ export class Select {
 	constructor(selector, options) {
 		this.elem = document.querySelector(selector);
 		this.options = options;
-		this.selectedID = options.selectedId;
+		this.selectedID = options.selectedID;
 
 		this.#render();
 		this.#setup();
+
+		console.log(this.current);
 	}
 
 	#render() {

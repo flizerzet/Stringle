@@ -1,5 +1,5 @@
 .select {
-	width: 100%;
+	// width: 100%;
 	position: relative;
 	&._open {
 		.select__dropdown {
@@ -34,9 +34,7 @@
 	}
 
 	&__input {
-		border: 1px solid #ccc;
 		border-radius: 5px;
-		height: 80px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -46,12 +44,14 @@
 
 	&__icon {
 		transition: transform .2s;
+		font-size: 10px;
+		margin-left: 5px;
 	}
 
 	&__dropdown {
 		display: none;
 		position: absolute;
-		top: 100%;
+		top: 150%;
 		left: 0;
 		right: 0;
 		border: 1px solid #ccc;
@@ -63,14 +63,15 @@
 
 	&__item {
 		padding: 1rem;
-		border-bottom: 1px solid #ccc;
 		cursor: pointer;
 		transition: background-color .2s;
-
+		background-color: #fff;
 		&._selected {
 			background-color: bisque;
 		}
-
+		&:not(:last-child){
+			border-bottom: 1px solid #c4c4c4;
+		};
 		@media (any-hover: hover) {
 			&:hover{
 				background-color: #eee;
