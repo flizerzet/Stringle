@@ -20,6 +20,7 @@
 		"gulp-clean-css": "latest",
 		"gulp-file-include": "^2.3.0",
 		"gulp-group-css-media-queries": "latest",
+		"gulp-image": "^6.3.1",
 		"gulp-imagemin": "latest",
 		"gulp-newer": "latest",
 		"gulp-notify": "^4.0.0",

@@ -13,31 +13,38 @@
 <body>
 	<div class="wrapper">
 		<main class="page">
-			<aside class="main-menu">
-				<a href="" class="main-menu__logo">
-					<img src="img/logo.svg" alt="" />
-					<span>Stringle</span>
-				</a>
-				<div class="main-menu__menu">
-					<nav class="main-menu__body">
-						<ul class="main-menu__list">
-							<li class="main-menu__item"><a class="main-menu__link _icon-house" href="#">Dashboard</a></li>
-							<li class="main-menu__item"><a class="main-menu__link _icon-folder" href="#">Classes</a></li>
-							<li class="main-menu__item"><a class="main-menu__link _icon-book" href="#">Resources</a></li>
-							<li class="main-menu__item"><a class="main-menu__link _icon-calendar" href="#">Learning Plan</a></li>
-							<li class="main-menu__item" data-notification="4"><a class="main-menu__link _icon-chat" href="#">Chat</a></li>
-							<li class="main-menu__item"><a class="main-menu__link _icon-settings" href="#">Settings</a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="main-menu__upgrade upgrade-main-menu">
-					<div class="upgrade-main-menu__img"><img src="img/upgrade.png" alt=""></div>
-					<div class="upgrade-main-menu__text">Upgrade to <span>PRO</span> for more resources</div>
-					<button class="upgrade-main-menu__btn">Upgrade</button>
+			<aside class="main-menu menu">
+				<div class="menu__body">
+					<a href="" class="main-menu__logo">
+						<img src="img/logo.svg" alt="" />
+						<span>Stringle</span>
+					</a>
+					<div class="main-menu__menu">
+						<nav class="main-menu__body">
+							<ul class="main-menu__list">
+								<li class="main-menu__item"><a class="main-menu__link _icon-house" href="#">Dashboard</a></li>
+								<li class="main-menu__item"><a class="main-menu__link _icon-folder" href="#">Classes</a></li>
+								<li class="main-menu__item"><a class="main-menu__link _icon-book" href="#">Resources</a></li>
+								<li class="main-menu__item"><a class="main-menu__link _icon-calendar" href="#">Learning Plan</a></li>
+								<li class="main-menu__item" data-notification="4"><a class="main-menu__link _icon-chat" href="#">Chat</a></li>
+								<li class="main-menu__item"><a class="main-menu__link _icon-settings" href="#">Settings</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="main-menu__upgrade upgrade-main-menu">
+						<div class="upgrade-main-menu__img"><img src="img/upgrade.png" alt=""></div>
+						<div class="upgrade-main-menu__text">Upgrade to <span>PRO</span> for more resources</div>
+						<button class="upgrade-main-menu__btn">Upgrade</button>
+					</div>
 				</div>
 			</aside>
 			<div class="main">
 				<header class="header">
+					<div class="menu__icon">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
 					<div class="search-header__input">
 						<input type="text" placeholder="Search...">
 					</div>
@@ -50,6 +57,7 @@
 							</div>
 						</div>
 					</div>
+					<div class="header__user"><img src="img/icons/user.svg" alt=""></div>
 				</header>
 				<div class="hello">
 					<h1 class="hello__title">Welcome back Anna!</h1>
@@ -105,7 +113,7 @@
 					<div class="main__block block-main main-spended">
 						<div class="block-main__header">
 							<div class="block-main__title">
-								Last week
+								Time Spent on Learning
 							</div>
 							<div class="block-main__link _select"></div>
 						</div>
@@ -226,7 +234,80 @@
 					</div>
 				</footer>
 			</div>
-			<div class="user-menu"></div>
+			<div class="user-menu">
+				<div class="user-menu__header">
+					<div class="user-menu__title">Logout</div>
+					<div class="user-menu__buttons">
+						<div class="_icon-exit"></div>
+						<div class="user-menu__close">&times;</div>
+					</div>
+				</div>
+				<div class="user-menu__profile">
+					<div class="user-menu__avatar">
+						<img src="img/avatar.jpeg" alt="">
+						<div class="user-menu__add-avatar">+</div>
+					</div>
+					<div class="user-menu__name">Sadia Tasnim</div>
+					<div class="user-menu__status">Student</div>
+				</div>
+				<div class="user-menu__skills">
+					<div class="user-menu__skill user-skill">
+						<div class="user-skill__icon">B2</div>
+						<div class="user-skill__info">
+							<div class="user-skill__lang">English</div>
+							<div class="user-skill__level">High intermediate</div>
+						</div>
+						<div class="user-skill__progress result__progress">
+							<progress value="0.5"></progress>
+						</div>
+					</div>
+					<div class="user-menu__skill user-skill">
+						<div class="user-skill__icon">C1</div>
+						<div class="user-skill__info">
+							<div class="user-skill__lang">Spanish</div>
+							<div class="user-skill__level">Advanced</div>
+						</div>
+						<div class="user-skill__progress result__progress">
+							<progress value="0.85"></progress>
+						</div>
+					</div>
+				</div>
+				<div class="user-menu__reminders user-reminders">
+					<div class="user-reminders__header">
+						<div class="user-reminders__title">Reminders</div>
+						<div class="user-reminders__icon _icon-reminder _has-reminder"></div>
+					</div>
+					<div class="user-reminders__body">
+						<div class="user-reminders__item item-reminder">
+							<div class="item-reminder__icon _high-priority">
+								<span class="_icon-warning"></span>
+							</div>
+							<div class="item-reminder__info">
+								<div class="item-reminder__title">Eng - Vocabulary test</div>
+								<div class="item-reminder__date">24 Sep 2019, Firday</div>
+							</div>
+						</div>
+						<div class="user-reminders__item item-reminder">
+							<div class="item-reminder__icon _low-priority">
+								<span class="_icon-mail"></span>
+							</div>
+							<div class="item-reminder__info">
+								<div class="item-reminder__title">Eng - Send grammer homeworktest</div>
+								<div class="item-reminder__date">29 Sep 2019, Wednesday</div>
+							</div>
+						</div>
+						<div class="user-reminders__item item-reminder">
+							<div class="item-reminder__icon _low-priority">
+								<span class="_icon-mail"></span>
+							</div>
+							<div class="item-reminder__info">
+								<div class="item-reminder__title">Spanish - Send essay</div>
+								<div class="item-reminder__date">05 oct 2019, Monday</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</main>
 	</div>
 </body>

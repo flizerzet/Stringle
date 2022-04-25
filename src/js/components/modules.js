@@ -128,6 +128,12 @@ export function menuInit() {
 			menu.classList.toggle('_active')
 			body.classList.toggle('_locked')
 		}
+		menu.addEventListener('click',  e => {
+			if (e.target.closest('.menu__body')) return;
+			burger.classList.remove('_active')
+			menu.classList.remove('_active')
+			body.classList.remove('_locked')
+		})
 	}
 };
 
@@ -648,17 +654,17 @@ const getTemplate = (data = [], placeholder, selectedID) => {
 	})
 
 	return `
-<div class="select__body">
-	<div class="select__input" data-type="input">
-		<span data-type="value">${text}</span>
-		<div class="select__icon _icon-dropdown-arrow"></div>
-	</div>
-	<div class="select__dropdown">
-		<ul class="select__list">
-			${htmlItems.join('')}
-		</ul>
-	</div>
-</div>
+		<div class="select__body">
+			<div class="select__input" data-type="input">
+				<span data-type="value">${text}</span>
+				<div class="select__icon _icon-dropdown-arrow"></div>
+			</div>
+			<div class="select__dropdown">
+				<ul class="select__list">
+					${htmlItems.join('')}
+				</ul>
+			</div>
+		</div>
 	`
 }
 

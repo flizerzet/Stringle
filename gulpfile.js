@@ -11,6 +11,7 @@ import minRename from 'gulp-rename';
 import cleanCss from 'gulp-clean-css';
 import newer from 'gulp-newer';
 import imagemin from 'gulp-imagemin';
+import image from 'gulp-image';
 import webp from 'imagemin-webp';
 import webpcss from 'gulp-webpcss';
 import webphtml from 'gulp-webp-html-nosvg';
@@ -50,7 +51,7 @@ const app = {
 		js: `${srcFolder}/js/app.js`,
 		css: `${srcFolder}/scss/style.scss`,
 		images: [`${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`, "!**/favicon.*"],
-		icons: [`${srcFolder}/img/**/*.svg`, "!**/favicon.*"],
+		icons: [`${srcFolder}/img/**/*.svg`, `${srcFolder}/**/favicon.*`],
 		fonts: `${srcFolder}/fonts/*.ttf`,
 		assets: `${srcFolder}/assets/**/*.*`,
 		json: `${srcFolder}/json/*.*`,
@@ -141,14 +142,6 @@ function cssWebp() {
 function images() {
 	return src(app.src.images)
 		.pipe(newer(app.build.images))
-		.pipe(
-			imagemin({
-				progressive: true,
-				svgoPlugins: [{ removeViewBox: false }],
-				interlaced: true,
-				optimizationLevel: 5 // 0 to 7
-			})
-		)
 		.pipe(dest(app.build.images))
 		.pipe(browsersync.stream());
 }
@@ -170,20 +163,21 @@ function imagesWebp() {
 		.pipe(dest(app.build.images))
 		.pipe(src(app.src.images))
 		.pipe(newer(app.build.images))
-		.pipe(
-			imagemin({
-				progressive: true,
-				svgoPlugins: [{ removeViewBox: false }],
-				interlaced: true,
-				optimizationLevel: 5 // 0 to 7
-			})
-		)
+		.pipe(image())
 		.pipe(dest(app.build.images))
 		.pipe(src(app.src.icons))
 		.pipe(newer(app.build.images))
 		.pipe(dest(app.build.images))
 }
 
+// Картинки с оптимизацией
+function imagesBuild() {
+	return src(app.src.images)
+		.pipe(newer(app.build.images))
+		.pipe(image())
+		.pipe(dest(app.build.images))
+		.pipe(browsersync.stream());
+}
 
 // Сброка JS файлов (вебпаком)
 function js() {
@@ -328,7 +322,7 @@ function watchFiles() {
 
 let fontsBuild = gulp.series(fonts, fontStyle);
 let dev = gulp.series(clean, gulp.parallel(html, fonts, js, images, icons, assets, json), fontStyle, css, watchFiles);
-let build = gulp.series(cleanDir, gulp.parallel(html, jsDev, js, fonts, images, icons, json, assets), css);
+let build = gulp.series(cleanDir, gulp.parallel(html, jsDev, js, fonts, imagesBuild, icons, json, assets), css);
 let buildWebp = gulp.series(cleanDir, gulp.parallel(htmlWebp, jsDev, js, fonts, imagesWebp, icons, json, assets), cssWebp);
 
 gulp.task('clean', cleanDir)

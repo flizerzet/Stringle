@@ -45,7 +45,7 @@ import * as modules from './components/modules.js'
 /*===========================================*/
 //---Меню
 
-// modules.menuInit();
+modules.menuInit();
 
 /*===========================================*/
 //---Модальные окна
@@ -92,8 +92,8 @@ import * as modules from './components/modules.js'
 //---Select
 
 new modules.Select('._select', {
-	placeholder: "Last Week",
-	selectedID: 1,
+	placeholder: "Select interval",
+	selectedID: "1",
 	data: [
 		{id: '1', value: "Last Week"},
 		{id: '2', value: "Last Month"},

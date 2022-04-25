@@ -61,6 +61,7 @@ body {
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
+	position: relative;
 	// Для слайдеров
 	> * {
 		min-width: 0;

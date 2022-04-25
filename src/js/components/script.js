@@ -1,3 +1,5 @@
+const body = document.body;
+
 const searchHeader = document.querySelector('.search-header')
 
 if (searchHeader) {
@@ -53,10 +55,29 @@ if (progresses) {
 		const progressElem =  progress.querySelector('progress');
 		const progressValue =  progress.querySelector('.result__progress_value');
 
-		progressValue.textContent = progressElem.value * 100 + '%';
+		if (progressValue) {
+			progressValue.textContent = progressElem.value * 100 + '%';
+		}
+
 
 		if (progressElem.value <= 25/100) {
 			progress.classList.add('_red')
 		}
 	})
+}
+
+const userBtn = document.querySelector('.header__user');
+const userMenu = document.querySelector('.user-menu');
+const closeUserMenuBtn = document.querySelector('.user-menu__close')
+
+if (userBtn && userMenu) {
+	userBtn.addEventListener('click', () => {
+		userMenu.classList.toggle('_active')
+		body.classList.toggle('_lock')
+	})
+
+	closeUserMenuBtn.addEventListener('click', () => {
+		userMenu.classList.remove('_active')
+		body.classList.remove('_lock')
+	})	
 }
