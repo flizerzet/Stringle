@@ -61,7 +61,7 @@ const app = {
 		css: `${srcFolder}/scss/**/*.scss`,
 		js: `${srcFolder}/js/**/*.js`,
 		images: [`${srcFolder}/img/**/*.{jpg,png,jpeg,svg,gif,webp}`, "!**/favicon.*"],
-		icons: [`${srcFolder}/img/**/*.svg`, "!**/favicon.*"],
+		icons: [`${srcFolder}/img/**/*.svg`, `${srcFolder}/**/favicon.*`],
 		fonts: `${srcFolder}/fonts/*.ttf`,
 		assets: `${srcFolder}/assets/**/*.*`,
 		json: `${srcFolder}/json/*.*`,

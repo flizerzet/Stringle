@@ -487,6 +487,7 @@
 			vertical-align: middle;
 			width: 92px;
 			height: 5px;
+			border-radius: 5px;
 			&::-webkit-progress-bar {
 				border-radius: 5px;
 				background-color: #DCDCE5;
@@ -494,6 +495,10 @@
 			&::-webkit-progress-value {
 				background-color: #5E81F4;
 				border-radius: 5px;
+			}
+			&::-moz-progress-bar {
+				border-radius: 5px;
+				background-color: #5E81F4;
 			}
 		}
 	}
